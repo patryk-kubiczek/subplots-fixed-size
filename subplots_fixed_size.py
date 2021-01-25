@@ -22,10 +22,10 @@ def subplots(nrows=1, ncols=1,
 
     fig = plt.figure(figsize=figsize)
 
-    h = [Size.Scaled(leftspace)] + [Size.Fixed(wsize), Size.Scaled(wspace)] * ncols
-    h[-1] = Size.Scaled(rightspace)
-    v = [Size.Scaled(bottomspace)] + [Size.Fixed(hsize), Size.Scaled(hspace)] * nrows
-    v[-1] = Size.Scaled(topspace)
+    h = [Size.Fixed(leftspace)] + [Size.Fixed(wsize), Size.Fixed(wspace)] * ncols
+    h[-1] = Size.Fixed(rightspace)
+    v = [Size.Fixed(bottomspace)] + [Size.Fixed(hsize), Size.Fixed(hspace)] * nrows
+    v[-1] = Size.Fixed(topspace)
 
     divider = Divider(fig, (0, 0, 1, 1), h, v, aspect=False)
     axarr = np.empty((nrows, ncols), dtype=object)
