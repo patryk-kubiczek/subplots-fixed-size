@@ -4,9 +4,6 @@ from mpl_toolkits.axes_grid1 import Divider, Size
 from mpl_toolkits.axes_grid1.mpl_axes import Axes
 
 import numpy as np
-import yaml
-
-conf = yaml.safe_load(open("conf.yaml"))
 
 def subplots(nrows=1, ncols=1,
              wsize=3.2, hsize=2.3,
